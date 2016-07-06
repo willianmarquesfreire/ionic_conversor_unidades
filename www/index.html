@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="starterCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">Conversor de Unidades Huds</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div class="list">
+          <label class="item item-input">
+            <input type="number" placeholder="Metros" ng-model="mt">
+          </label>
+          <label class="item item-input">
+            <i class="icon icon-left ion-android-bulb"></i>
+          </label>
+          <label class="item item-input disabled">
+            <input type="text" placeholder="Kilometro" ng-model="km" disabled>
+          </label>
+          <label class="item item-input">
+            <i class="ion-arrow-down-a"></i>
+          </label>
+          <label class="item item-input disabled">
+            <input type="text" placeholder="Milha" ng-model="milha" disabled>
+          </label>
+        </div>
+        <button class="button button-block button-outline button-calm icon-left ion-gear-a" ng-click="calcular(mt,km,milha)">Calcular</button>
+        <button class="button button-block button-outline button-assertive icon-right ion-backspace-outline" ng-click="limparCampos()">Limpar Campos</button>
+        <div class="list">
+          <a class="item item-thumbnail-left">
+            <img src="img/ionic.png" alt="">
+            <h2>IONIC</h2>
+            <p>Projeto desenvolvido em IONIC</p>
+            <p>Development: Hudhyson</p>
+          </a>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
